@@ -9,6 +9,9 @@ class MiniTransformer(nn.Module):
         self.embed = Embedding(vocab_size, d_model)
         self.blocks = nn.ModuleList([TransformerBlock(d_model, hidden_dim) for _ in range(n_layers)])
         self.head = nn.Linear(d_model, vocab_size)  # 输出每个token概率
+        print(f"   [Model Init] embed: {self.embed}")
+        print(f"   [Model Init] blocks: {self.blocks}")
+        print(f"   [Model Init] head: {self.head}")
 
     def forward(self, x):
         print(f"   [Model] 输入 Token IDs: {x}")

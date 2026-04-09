@@ -18,6 +18,7 @@ encoded_tokens = tokenizer.encode(text)
 tokens = torch.tensor([encoded_tokens], dtype=torch.long)
 print(f"2. Token 编码 (IDs): {encoded_tokens}")
 print(f"3. 输入 Tensor 形状: {tokens.shape} (batch_size, seq_len)")
+print(f"4. 输入 Tensor: {tokens}")
 
 # 2. Model Forward
 print("\n--- 进入模型内部数据流 ---")
